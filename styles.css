@@ -1,6 +1,6 @@
 .container{
-    width: 800px;
-	height: 400px;
+    width: 50%;
+	height: 55%;
 	background-color: black;
 	
 	position: absolute;
@@ -17,14 +17,15 @@
     height:100px;
     margin-top: 10px;
     text-align: center;
+    font-size: 1vw;
 }
 
 .pause-play-button{
     border: 3px solid white;
     border-radius: 25px;
     float: left;
-    height: 90px;
-    width: 350px;
+    height: 90%;
+    width: 40%;
     margin-left: 20px;
     color: white;
     padding: 1.5rem;
@@ -35,8 +36,8 @@
 }
 
 .stop-restart-button{
-    height: 90px;
-    width: 350px;
+    height: 90%;
+    width: 40%;
     border: 3px solid white;
     border-radius: 25px;
     float: right;
@@ -52,7 +53,7 @@
 .timer{
     border: 3px solid white;
     border-radius: 25px;
-    height: 280px;
+    height: 125%;
     
 }
 
@@ -60,7 +61,7 @@
     color: white;
     text-align: center;
     margin: auto;
-    font-size: 10rem;
+    font-size: 10vw;
 }
 
 body{

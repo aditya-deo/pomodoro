@@ -66,6 +66,8 @@ stopButton.addEventListener("click",function(){
         playClicked = false;
         pauseClicked = false;
         stopClicked = true;
+        clearInterval(a);
+        clearInterval(b);
         var workMinutes = 23;
         var workSecs = 59;
         minutes.innerText = 25;

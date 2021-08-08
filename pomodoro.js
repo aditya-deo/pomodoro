@@ -13,11 +13,13 @@ const pauseButton = document.querySelector(".pause-button");
 const stopButton = document.querySelector(".stop-restart-button");
 
 playButton.addEventListener("click",()=>{
-    console.log("clicked");
+    console.log("play button clicked");
         minutes.innerText = 24;
         if(playClicked==false){
             playClicked = true;
-                var a = setInterval(() => {
+            pauseClicked = false;
+            stopClicked = false;
+            a = setInterval(() => {
                 if(workMinutes>9){
                     minutes.innerText = workMinutes;
                 }
@@ -29,7 +31,7 @@ playButton.addEventListener("click",()=>{
                 if(workMinutes==-1) clearInterval(a);
             }, 60000);
 
-            var b = setInterval(() => {
+            b = setInterval(() => {
                 if(workSecs>9){
                     seconds.innerText = workSecs;
                 }
@@ -44,6 +46,33 @@ playButton.addEventListener("click",()=>{
         }
         
 });
+
+pauseButton.addEventListener("click",function(){
+    console.log("pause button clicked");
+    if(pauseClicked==false){
+        playClicked = false;
+        pauseClicked = true;
+        stopClicked = false;
+        clearInterval(a);
+        clearInterval(b);
+    }
+    
+})
+
+
+stopButton.addEventListener("click",function(){
+    console.log("stop button clicked");
+    if(stopClicked==false){
+        playClicked = false;
+        pauseClicked = false;
+        stopClicked = true;
+        var workMinutes = 23;
+        var workSecs = 59;
+        minutes.innerText = 25;
+        seconds.innerText = "00";
+    }
+    
+})
 
 
 

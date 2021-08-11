@@ -1,9 +1,9 @@
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 
-var workMinutes = 0;
+var workMinutes = 24;
 var workSecs = 59;
-var breakMinutes = 0;
+var breakMinutes = 4;
 var breakSecs = 59;
 
 var playClicked = false;

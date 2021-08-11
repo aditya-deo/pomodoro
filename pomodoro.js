@@ -13,6 +13,8 @@ var stopClicked = false;
 const playButton = document.querySelector(".play-button");
 const pauseButton = document.querySelector(".pause-button");
 const stopButton = document.querySelector(".stop-restart-button");
+var audio = new Audio('sounds/ding.mp3');
+
 
 stopButton.addEventListener("click",stop_procedure)
 
@@ -121,6 +123,7 @@ function workFunc(){
 }
 
 function breakFunc(){
+    audio.play();
     var takeBreak = confirm("Start Break?");
     if(takeBreak){
         playButton.removeEventListener("click",play_procedure);
@@ -147,6 +150,7 @@ function breakFunc(){
                 breakMinutes--;
             }
             if(breakSecs==0 && breakMinutes==0) {
+                audio.play();
                 stop_procedure();
                 clearInterval(b);
                 return;
